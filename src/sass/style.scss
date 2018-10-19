@@ -1,0 +1,515 @@
+@import "./variables.scss";
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+input, select.form-control, textarea {
+    border: 1px solid $blue;
+}
+input[type=text] {
+    min-height:40px;
+    padding:5px;
+}
+    input[type=text]:focus, select.form-control:focus,textarea.form-control:focus {
+        box-shadow: none;
+        border: 1px solid $blue;
+    }
+body {
+    background-color:$white1;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+	white-space: normal;
+}
+
+.btn-green {
+    background-color: $green;
+    color: white;
+    color: $white;
+    border-radius: 100px;
+}
+.btn-blue {
+    background-color: $blue;
+    color: $white;
+    border-radius: 100px;
+}
+.btn-white-1 {
+    color: $blue;
+    background-color: $white;
+    border-radius: 100px;
+}
+.btn-red {
+    background-color: $red;
+    color: $white;
+    border-radius: 100px;
+}
+.text-blue {
+    color: $blue;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-green {
+    color: $green;
+}
+
+.border-blue {
+    border-color: $blue;
+}
+
+.bg-blue {
+    background-color:$blue;
+}
+.bg-green {
+    background-color:$green
+}
+.bg-red {
+    background-color:$red;
+}
+.bg-yellow {
+    background-color:$yellow;
+}
+.bg-white {
+    background-color:$white;
+}
+.bg-white1 {
+    background-color:$white1;
+}
+.c-pointer {
+    cursor:pointer;
+}
+.datepicker {
+    color:$blue;
+    border:1px solid $blue;
+}
+    .datepicker .table-condensed {
+        width:250px;
+    }
+.ui-timepicker-container.ui-timepicker-standard {
+    margin-top: -70px;
+}
+.scroll-pagination {
+    max-width:60vw;
+    overflow-x:hidden;
+}
+/*Ajustes contenedores del layout*/
+.navbar-custom-style {
+    border-bottom: 4px solid $blue;
+}
+
+    .navbar-custom-style .hamburger {
+        background-color: $green;
+        background-image: none;
+        border-color: transparent;
+        border-radius: 4px;
+    }
+
+    .navbar-custom-style .title {
+        font-weight: 700;
+        font-size: 25px;
+        color: $blue;
+    }
+
+    .navbar-custom-style .list-option-menu a.nav-link, .navbar-custom-style .list-option-menu .dropdown.show a.nav-link {
+        color: $blue;
+    }
+
+        .navbar-custom-style .list-option-menu a.nav-link:hover, .navbar-custom-style .list-option-menu .dropdown.show a.nav-link:hover {
+            color: $green;
+        }
+
+	.navbar-custom-style .nav-item .dropdown-menu {
+		right: 0;
+		left: initial;
+	}
+    .navbar-custom-style .dropdown-menu {
+        border: 2px solid $blue;
+        border-top: 0;
+        border-radius: 0;
+        position:relative;
+    }
+        .navbar-custom-style .dropdown-menu.show a.nav-link {
+            color: $blue;
+        }
+            .navbar-custom-style .dropdown-menu.show a.nav-link:hover {
+                color: $green;
+            }
+
+.cont-body {
+	margin-top: 70px;
+	padding: 0;
+}
+
+.cont-inner-body {
+	position: relative;
+	padding-bottom: 6em;
+	top: 2em;
+}
+
+footer {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-item.active .page-link {
+    background-color: $blue;
+    color: $white;
+}
+.glass-modal {
+    background-color:rgba(0,0,0,0.5);
+}
+.modal-content.modal-alert {
+    border: 2px solid $green;
+}
+.modal-content.confirm {
+    border: 2px solid $blue;
+}
+.modal-body {
+    max-height:70vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+/*Calendario de Enventos*/
+
+
+
+/*Detalle de noticias(Contenido)*/
+.content-detail-contenido, .content-usuarios-index {
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+	.content-detail-contenido img {
+		margin-bottom: 10px;
+	}
+
+    .content-detail-contenido strong {
+        color: $blue;
+    }
+/*Noticias(Contenido)*/
+.content-contenido, .content-buscador-index {
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+    .content-contenido .notice > div {
+        background-color: $white1;
+        padding-bottom: 30px;
+    }
+    .content-contenido .notice .card-box {
+        padding:20px;
+    }
+/*Eventos(Calendario)*/
+.content-evento-index {
+	padding-top: 40px;
+	margin-bottom: 20px;
+}
+
+    .content-evento-index .body-content {
+        background-color: $white;
+        padding: 20px;
+    }
+    .content-evento-index .calendar button {
+        background-color: $blue;
+        color: $white;
+        background-image: none;
+        text-transform: capitalize;
+    }
+
+    .content-evento-index .calendar .fc-center {
+        text-transform: capitalize;
+        font-size: 18px;
+        color: $blue;
+    }
+
+    .content-evento-index .calendar .fc-day-header {
+        color: $blue;
+    }
+/*Foro*/
+.content-foro-index {
+	padding-top:30px;
+	margin-bottom:20px;
+}
+.accordion-custom > .card:nth-child(2n+1) {
+    background-color: $blue;
+}
+.accordion-custom > .card:nth-child(2n) {
+    background-color: $white1;
+}
+.accordion-custom > .card:nth-child(2n+1) .text {
+    color: $white;
+}
+
+.accordion-custom > .card:nth-child(2n) .text {
+    color: $blue;
+}
+    .accordion-custom > .card .card-header{
+        display:flex;
+        justify-content:space-between;
+    }
+    .accordion-custom > .card .card-footer {
+        text-align:right;
+    }
+    .accordion-custom > .card .options {
+        display: flex;
+        justify-content: space-between;
+    }
+    .accordion-custom > .card .options .text{
+        font-size:20px;
+    }
+        .accordion-custom > .card .options div.coments {
+            position:relative;
+        }
+            .accordion-custom > .card .options div.coments:before {
+                content: attr(data-qualify);
+                background-color: $red;
+                padding: 1px 6px;
+                border-radius: 50%;
+                font-size: 12px;
+                position: absolute;
+                top: -3px;
+                right: -3px;
+            }
+/*ForoPost*/
+.content-foropost-index {
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+    .content-foropost-index .custom-list-coment .list-group-item:nth-child(2n+1) {
+        background-color: $blue;
+        color: $white;
+    }
+    .content-foropost-index .custom-list-coment .list-group-item:nth-child(2n) {
+        color: $blue;
+        background-color: $white;
+    }
+    .content-foropost-index .custom-form button {
+        padding:3px 10px;
+    }
+    .content-foropost-index .form-custom {
+        padding:10px;
+        text-align:right;
+    }
+        .content-foropost-index .form-custom div {
+            border-color: $blue;
+        }
+    .content-foropost-index .calification span {
+        font-size:30px;
+    }
+    .content-foropost-index .quantity {
+        position:relative;
+    }
+        .content-foropost-index .quantity::after {
+            content: attr(data-quantity);
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            font-size: 12px;
+            background-color: $yellow;
+            padding: 1px 6px;
+            color: $white;
+            border-radius: 50%;
+        }
+    .content-foropost-index .theme {
+        border-radius:4px;
+        padding:10px;
+    }
+/*ComparteTuCarro*/
+.content-carro-index, .content-galeria-index {
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+/*Menu*/
+.custom_menu i {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.custom_menu a {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    height:100%;
+}
+.custom_menu .custom-dropdown {
+    height:100%;
+}
+/*Buscador*/
+.content-buscador-index .content-table, .content-usuarios-index .content-table {
+    overflow-x:auto;
+    max-width:90vw;
+}
+/*Usuarios*/
+.content-usuarios-index .form-custom {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+@media screen and (min-width: 992px) {
+    .navbar-custom-style .hamburger {
+		display: none;
+	}
+    .navbar-custom-style {
+        height: 70px;
+    }
+        .navbar-custom-style .dropdown-menu.search {
+            width: 300px;
+        }
+        .navbar-custom-style .dropdown-menu:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 20px;
+            height: 15px;
+            width: 15px;
+            border-right: 2px solid $blue;
+            border-top: 2px solid $blue;
+            transform:rotate(-45deg);
+        }
+}
+
+@media screen and (max-width:991px) {
+	.navbar-custom-style .navbar-nav {
+		height: 75vh;
+		overflow: auto;
+	}
+    .navbar-custom-style .list-option-menu a.nav-link i::after {
+        content: attr(data-name);
+        color: $blue;
+        font-size: 15px;
+        font-weight: normal;
+        margin-left: 10px;
+        font-style: italic;
+    }
+    .navbar-custom-style .dropdown-menu{
+        width:92vw;
+    }
+    .navbar-custom-style .dropdown-menu.search {
+        width: 92vw;
+    }
+    .content-usuarios-index .form-custom {
+        flex-direction:column;
+    }
+}
+.menu-icon-dinamic {
+    height:30px;
+    width:30px;
+}
+.menu-icon-dinamic svg{
+    fill:$blue;
+}
+/*Galeria*/
+
+.content-galeria-index img {
+    border-radius:0;
+    height:250px;
+    width:100%;
+}
+.content-galeria-index .thumbnail {
+    position:relative;
+}
+.content-galeria-index .img-description {
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-align:center;
+    min-height:50px;
+}
+.content-galeria-index .img-description .glass {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    opacity:0.4;
+    z-index:0;
+}
+    .content-galeria-index .img-description p {
+        position:absolute;
+        width:100%;
+        height:100%;
+        z-index:2;
+    }
+.galeria-col {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: .6;
+}
+.loading-general {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    z-index:1031;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    display:none;
+}
+@keyframes imag-rotate {
+    0% {transform: rotateY(0deg);}
+    50% { transform: rotateY(180deg);}
+}
+    .loading-general img {
+        animation: imag-rotate;
+        animation-duration:2s;
+        animation-iteration-count:infinite;
+    }
+i.spinner {
+    font-size: 18px;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+/*Estilos responsive*/
+
+@media screen and (max-width:437px) {
+    .content-evento-index .calendar .fc-toolbar {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		height: 140px;
+	}
+
+	.navbar-custom-style .title {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width:437px) {
+    .navbar-custom-style .title {
+        font-size: 12px;
+    }
+}
+

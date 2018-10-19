@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url:"http://orion.azteca-comunicaciones.com/ConexionAzApi/api/",
+  "MenuService":{
+    "method":"",
+    "withToken":true
+  },
+  "AccountService":{
+    "method":"Account",
+    "withToken":false
+  },
 };
 
 /*
